@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opa, eai</title>
+    <style>
+      body {
+        background: #0c32;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .pagina {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .titulo {
+        margin-bottom: 20px;
+      }
+
+      .caixa {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: fit-content;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .caixinha {
+        width: 100px;
+        height: 100px;
+        background: lightgray;
+        border-radius: 15%;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+      }
+
+      .yellow {
+        background: yellow;
+      }
+
+      .purple {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagina">
+      <div class="titulo">
+        <h1 class="texto-titulo">Opa, Eai</h1>
+      </div>
+      <div class="caixa">
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".caixinha").forEach((caixa) => {
+        caixa.addEventListener("click", function () {
+          if (this.classList.contains("yellow")) {
+            this.classList.remove("yellow");
+            this.classList.add("purple");
+          } else if (this.classList.contains("purple")) {
+            this.classList.remove("purple");
+            this.classList.add("yellow");
+          } else {
+            this.classList.add("yellow");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
